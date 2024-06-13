@@ -2,9 +2,9 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { changeCalendar } from '../generals-functions';
 
 @Pipe({
-  name: 'julian',
+  name: 'baikal',
 })
-export class JulainPipe implements PipeTransform {
+export class BaikalPipe implements PipeTransform {
   transform(value: Date, isJulian: boolean): string {
     return changeCalendar(value, isJulian);
   }
