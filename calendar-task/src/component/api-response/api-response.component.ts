@@ -9,7 +9,7 @@ import {Observable} from "rxjs";
   styleUrls: ['./api-response.component.scss']
 })
 export class ApiResponseComponent {
-  protected users$: Observable<User[]> = this.userService.getUsers()
+  protected readonly users$: Observable<User[]> = this.userService.getUsers()
 
   constructor(private userService: GetApiService) {}
 }
