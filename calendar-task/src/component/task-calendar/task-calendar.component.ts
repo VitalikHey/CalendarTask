@@ -8,10 +8,10 @@ import { Component } from '@angular/core';
 export class TaskCalendarComponent {
   protected date: Date = new Date();
 
-  protected handleClickButton(isIncrement: boolean): void {
+  protected handleClickButton(countDay: number): void {
     const newDate: Date = new Date(this.date);
     const currentDay: number = newDate.getDate();
-    newDate.setDate(isIncrement ? currentDay + 1 : currentDay - 1);
+    newDate.setDate(currentDay + countDay);
     this.date = newDate;
   }
 }

@@ -1,5 +1,5 @@
 <div>
-  <button (click)="handleClickButton(true)">Прибавить на 1 день</button>
+  <button (click)="handleClickButton(1)">Прибавить на 1 день</button>
   <ul>
     <li>
       Григорианский:
@@ -7,12 +7,12 @@
     </li>
     <li>
       Древнеславянский(байкальский):
-      <span> {{ date | baikalCalendar }}</span>
+      <span> {{ date | calendar: false }}</span>
     </li>
     <li>
       Юлианский:
-      <span> {{ date | julianCalendar }}</span>
+      <span> {{ date | calendar: true }}</span>
     </li>
   </ul>
-  <button (click)="handleClickButton(false)">Уменьшить на 1 день</button>
+  <button (click)="handleClickButton(-1)">Уменьшить на 1 день</button>
 </div>
