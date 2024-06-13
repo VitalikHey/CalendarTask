@@ -7,11 +7,14 @@ import { TaskCalendarComponent } from '../task-calendar/task-calendar.component'
 import { JulianPipe } from '../../pipes/calendar-pipe/julian.pipe';
 import { FormsModule } from '@angular/forms';
 import { BaikalPipe } from '../../pipes/baikal-pipe/baikal.pipe';
+import {HttpClientModule} from "@angular/common/http";
+import {GetApiService} from "../get-api.service";
+import {ApiResponseComponent} from "../api-response/api-response.component";
 
 @NgModule({
-  declarations: [BaikalPipe, JulianPipe, AppComponent, TaskCalendarComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
-  providers: [],
+  declarations: [BaikalPipe, ApiResponseComponent, JulianPipe, AppComponent, TaskCalendarComponent],
+  imports: [HttpClientModule, BrowserModule, AppRoutingModule, FormsModule],
+  providers: [GetApiService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
