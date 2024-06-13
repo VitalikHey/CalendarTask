@@ -1,5 +1,6 @@
-import {Component, OnInit} from '@angular/core';
-import {GetApiService, User} from "../get-api.service";
+import {Component} from '@angular/core';
+import {GetApiService} from "../get-api.service";
+import {User} from "../common.types";
 import {Observable} from "rxjs";
 
 @Component({
@@ -7,13 +8,8 @@ import {Observable} from "rxjs";
   templateUrl: './api-response.component.html',
   styleUrls: ['./api-response.component.scss']
 })
-export class ApiResponseComponent implements OnInit {
-  public users$?: Observable<User[]>
+export class ApiResponseComponent {
+  protected users$: Observable<User[]> = this.userService.getUsers()
 
-  constructor(private userService: GetApiService) {
-  }
-
-  ngOnInit(): void {
-    this.users$ = this.userService.getUsers();
-  }
+  constructor(private userService: GetApiService) {}
 }

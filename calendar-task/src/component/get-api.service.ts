@@ -1,28 +1,21 @@
 import {Injectable} from '@angular/core';
 import {catchError, Observable, of} from "rxjs";
 import {HttpClient} from "@angular/common/http";
+import {User} from "./common.types";
 
-export interface User {
-  id: number,
-  name: string,
-  email: string
-}
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class GetApiService {
-  private url: string = 'http://localhost:3000/users'
-  private users$: Observable<User[]> = this.http.get<User[]>(this.url)
+  private readonly url: string = 'http://lcalhost:3000/users'
 
-  constructor(private http: HttpClient) {
+  constructor(private readonly http: HttpClient) {
   }
 
   public getUsers(): Observable<User[]> {
-    return this.users$
+    return this.http.get<User[]>(this.url)
       .pipe(
-        catchError(err => {
-          console.log('Error occurred: ', err);
+        catchError((err: object) => {
+          console.error('Error occurred: ', err);
           return of([]);
         })
       );

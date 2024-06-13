@@ -12,7 +12,7 @@ import {GetApiService} from "../get-api.service";
 import {ApiResponseComponent} from "../api-response/api-response.component";
 
 @NgModule({
-  declarations: [BaikalPipe, ApiResponseComponent, JulianPipe, AppComponent, TaskCalendarComponent],
+  declarations: [ApiResponseComponent, BaikalPipe, JulianPipe, AppComponent, TaskCalendarComponent],
   imports: [HttpClientModule, BrowserModule, AppRoutingModule, FormsModule],
   providers: [GetApiService],
   bootstrap: [AppComponent],
