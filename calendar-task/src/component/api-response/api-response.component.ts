@@ -12,5 +12,5 @@ import {Observable} from "rxjs";
 export class ApiResponseComponent {
   protected readonly users$: Observable<User[]> = this.userService.getUsers()
 
-  constructor(private userService: GetApiService) {}
+  private readonly userService: GetApiService = inject(GetApiService);
 }
