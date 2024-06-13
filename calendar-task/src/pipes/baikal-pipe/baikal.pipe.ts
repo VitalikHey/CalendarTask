@@ -5,7 +5,7 @@ import { changeCalendar } from '../generals-functions';
   name: 'baikal',
 })
 export class BaikalPipe implements PipeTransform {
-  transform(value: Date, isJulian: boolean): string {
-    return changeCalendar(value, isJulian);
+  transform(value: Date, countDay: number): string {
+    return changeCalendar(value, countDay);
   }
 }

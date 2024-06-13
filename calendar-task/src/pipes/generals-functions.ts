@@ -1,13 +1,11 @@
-export function changeCalendar(value: Date, isJulian: boolean): string {
+export function changeCalendar(value: Date, countDay: number): string {
   const newDate: Date = new Date(value);
   const currentDay: number = value.getDate();
-  newDate.setDate(isJulian ? currentDay + 14 : currentDay + 2);
-  return String(
-    'Дѣнь ' +
-      newDate.getDate() +
-      ' Мѣсяцъ ' +
-      (newDate.getMonth() + 1) +
-      ' Годъ ' +
-      newDate.getFullYear(),
-  );
+  newDate.setDate(currentDay + countDay);
+  return ('Дѣнь ' +
+    newDate.getDate() +
+    ' Мѣсяцъ ' +
+    (newDate.getMonth() + 1) +
+    ' Годъ ' +
+    newDate.getFullYear())
 }

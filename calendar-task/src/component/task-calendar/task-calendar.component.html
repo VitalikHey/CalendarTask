@@ -7,11 +7,11 @@
     </li>
     <li>
       Древнеславянский(байкальский):
-      <span> {{ date | baikal: false }}</span>
+      <span> {{ date | baikal: 2 }}</span>
     </li>
     <li>
       Юлианский:
-      <span> {{ date | julian: true }}</span>
+      <span> {{ date | julian: 14 }}</span>
     </li>
   </ul>
   <button (click)="handleClickButton(-1)">Уменьшить на 1 день</button>
