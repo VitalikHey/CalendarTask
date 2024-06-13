@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class BaikalCalendarPipe implements PipeTransform {
   transform(value: Date): string {
-    let newDate: Date = new Date(value);
+    const newDate: Date = new Date(value);
     const currentDay: number = value.getDate();
     newDate.setDate(currentDay + 2);
     return String(

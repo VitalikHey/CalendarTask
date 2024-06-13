@@ -6,11 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./task-calendar.component.scss'],
 })
 export class TaskCalendarComponent {
-  public date: Date = new Date();
+  protected date: Date = new Date();
 
-  public handleClickButton(isIncrement: boolean): void {
-    let newDate: Date = new Date(this.date);
-    let currentDay: number = newDate.getDate();
+  protected handleClickButton(isIncrement: boolean): void {
+    const newDate: Date = new Date(this.date);
+    const currentDay: number = newDate.getDate();
     newDate.setDate(isIncrement ? currentDay + 1 : currentDay - 1);
     this.date = newDate;
   }
