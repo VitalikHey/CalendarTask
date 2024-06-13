@@ -13,7 +13,7 @@ export interface User {
 })
 export class GetApiService {
   private url: string = 'http://localhost:3000/users'
-  public users$: Observable<User[]> = this.http.get<User[]>(this.url)
+  private users$: Observable<User[]> = this.http.get<User[]>(this.url)
 
   constructor(private http: HttpClient) {
   }
