@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, inject} from '@angular/core';
 import {GetApiService} from "../get-api.service";
 import {User} from "../common.types";
 import {Observable} from "rxjs";
@@ -10,7 +10,6 @@ import {Observable} from "rxjs";
 })
 
 export class ApiResponseComponent {
-  protected readonly users$: Observable<User[]> = this.userService.getUsers()
+  protected readonly users$: Observable<User[]> = inject(GetApiService).getUsers()
 
-  private readonly userService: GetApiService = inject(GetApiService);
 }
