@@ -6,7 +6,7 @@ import {User} from "./common.types";
 
 @Injectable()
 export class GetApiService {
-  private readonly url: string = 'http://lcalhost:3000/users'
+  private readonly url: string = 'http://localhost:3000/users'
 
   constructor(private readonly http: HttpClient) {
   }
@@ -14,7 +14,7 @@ export class GetApiService {
   public getUsers(): Observable<User[]> {
     return this.http.get<User[]>(this.url)
       .pipe(
-        catchError((err: object) => {
+        catchError((err: unknown) => {
           console.error('Error occurred: ', err);
           return of([]);
         })
