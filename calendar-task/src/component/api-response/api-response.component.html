@@ -1,6 +1,11 @@
 <ng-container *ngIf="users$ | async as users">
   <div *ngFor="let user of users">
-    <span>{{user.name }}</span>
-    <span>{{user.email}}</span>
+    <span>{{ user.name }}</span>
+    <span>{{ user.email }}</span>
   </div>
+</ng-container>
+<ng-container *ngIf="address$ | async as addressOne">
+  <span>{{ addressOne.id }}</span>
+  <span>{{ addressOne.street }}</span>
+  <span>{{ addressOne.homeNumber }}</span>
 </ng-container>

@@ -15,5 +15,10 @@
       "name": "Kevin Duck",
       "email": "Kevin.Duck@example.com"
     }
-  ]
+  ],
+  "address": {
+    "id": 1,
+    "street": "Чапаева",
+    "homeNumber": 14
+  }
 }
