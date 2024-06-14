@@ -10,7 +10,6 @@ import { BaikalPipe } from '../../pipes/baikal-pipe/baikal.pipe';
 import { HttpClientModule } from '@angular/common/http';
 import { GetApiService } from '../get-api.service';
 import { ApiResponseComponent } from '../api-response/api-response.component';
-import {StreetHomePipe} from "../../pipes/street-home-pipe/street-home.pipe";
 
 @NgModule({
   declarations: [
@@ -19,7 +18,6 @@ import {StreetHomePipe} from "../../pipes/street-home-pipe/street-home.pipe";
     JulianPipe,
     AppComponent,
     TaskCalendarComponent,
-    StreetHomePipe,
   ],
   imports: [HttpClientModule, BrowserModule, AppRoutingModule, FormsModule],
   providers: [GetApiService],

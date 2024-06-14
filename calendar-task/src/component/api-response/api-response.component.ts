@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { GetApiService } from '../get-api.service';
-import { Address, User } from '../common.types';
+import { User } from '../common.types';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -11,6 +11,4 @@ import { Observable } from 'rxjs';
 export class ApiResponseComponent {
   protected readonly users$: Observable<User[]> =
     inject(GetApiService).getUsers();
-  protected readonly address$: Observable<Address> =
-    inject(GetApiService).getAddress();
 }

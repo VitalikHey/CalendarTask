@@ -3,22 +3,33 @@
     {
       "id": 1,
       "name": "John Doe",
-      "email": "john.doe@example.com"
+      "email": "john.doe@example.com",
+      "address": {
+        "id": 1,
+        "street": "Чапаева",
+        "homeNumber": 14
+      }
     },
     {
       "id": 2,
       "name": "Jane Doe",
-      "email": "jane.doe@example.com"
+      "email": "jane.doe@example.com",
+      "address": {
+        "id": 1,
+        "street": "Чапаева",
+        "homeNumber": 14
+      }
     },
     {
       "id": 3,
       "name": "Kevin Duck",
-      "email": "Kevin.Duck@example.com"
+      "email": "Kevin.Duck@example.com",
+      "address": {
+        "id": 1,
+        "street": "Чапаева",
+        "homeNumber": 14
+      }
     }
-  ],
-  "address": {
-    "id": 1,
-    "street": "Чапаева",
-    "homeNumber": 14
-  }
+
+  ]
 }
