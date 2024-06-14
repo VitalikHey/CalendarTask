@@ -16,8 +16,8 @@
       "email": "jane.doe@example.com",
       "address": {
         "id": 1,
-        "street": "Чапаева",
-        "homeNumber": 14
+        "street": "Парковая",
+        "homeNumber": 13
       }
     },
     {
@@ -26,8 +26,8 @@
       "email": "Kevin.Duck@example.com",
       "address": {
         "id": 1,
-        "street": "Чапаева",
-        "homeNumber": 14
+        "street": "Костюкова",
+        "homeNumber": 23
       }
     }
 
