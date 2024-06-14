@@ -1,8 +1,18 @@
+export class Address {
+  id: number
+  street: string
+  homeNumber: number
+  constructor(id: number, street: string, homeNumber: number) {
+    this.id = id
+    this.street = street
+    this.homeNumber = homeNumber
+  }
+}
 export class User {
   public id: number;
   public name: string;
   public email: string;
-  public address: { id: number; street: string; homeNumber: number };
+  public address: Address;
 
   constructor(id: number, name: string, email: string, address: {
     id: number;
@@ -15,7 +25,7 @@ export class User {
     this.address = address;
   }
 
-  public get Address(): string {
+  public get getAddress(): string {
     return `${this.address.street} ${this.address.homeNumber}`;
   }
 }
