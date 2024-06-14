@@ -22,7 +22,7 @@ export class GetApiService {
     return this.http.get<Address>(this.urlAddress).pipe(
       catchError((err: unknown) => {
         console.error('Error occurred ', err);
-        return of();
+        return of(); // Честно я просто хз как мне прописать значение тут, подскажи в беседе когда смотреть будешь
       }),
     );
   }

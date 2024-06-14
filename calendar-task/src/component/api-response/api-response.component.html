@@ -5,7 +5,5 @@
   </div>
 </ng-container>
 <ng-container *ngIf="address$ | async as addressOne">
-  <span>{{ addressOne.id }}</span>
-  <span>{{ addressOne.street }}</span>
-  <span>{{ addressOne.homeNumber }}</span>
+  <span>{{ addressOne | streetHome}}</span>
 </ng-container>
