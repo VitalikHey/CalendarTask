@@ -2,6 +2,6 @@
   <div *ngFor="let user of users">
     <span>{{ user.name }}</span>
     <span>{{ user.email }}</span>
-    <p>{{user.getAddress}}</p>
+    <p>{{ user.address.getAddress }}</p>
   </div>
 </ng-container>
